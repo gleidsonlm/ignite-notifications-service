@@ -26,8 +26,8 @@ export class SendNotification {
       category,
     });
 
-    return {
-      notification,
-    };
+    await this.notificationsRepository.create(notification);
+
+    return { notification };
   }
 }
